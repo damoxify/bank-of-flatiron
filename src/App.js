@@ -1,13 +1,17 @@
-import React from 'react'
-import Items from './Items'
+import React from 'react';
+import Items from './Items';
+
+
 
 const App = () => {
 
+
   return (
     <div>
-      <Items/>
+      <h1>Bank Transactions</h1>
+      <Items/>  
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
