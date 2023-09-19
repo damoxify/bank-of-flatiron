@@ -48,19 +48,17 @@ function Items() {
     <div>
       <NewItem onAddNewTransaction={addTransaction} />
       <div>
-        <input
+       
+      </div>
+          <input className="button-18" onClick={() => setSortType("category")} value="Sort by Category"/>
+          <input className="button-18" onClick={() => setSortType("description")} value= "Sort by Description"/>
+          <input
+        className="button-20"
           type="text"
           placeholder="Search by description"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-      </div>
-      <div>
-        <button onClick={() => setSortType("category")}>Sort by Category</button>
-        <button onClick={() => setSortType("description")}>
-          Sort by Description
-        </button>
-      </div>
       <table>
         <thead>
           <tr>
@@ -80,7 +78,7 @@ function Items() {
                 <td>{transaction.category}</td>
                 <td>{transaction.amount}</td>
                 <td>
-                  <button onClick={() => handleDelete(transaction.id)}>
+                  <button onClick={() => handleDelete(transaction.id)} className="button-18" role="button">
                     Delete Transaction
                   </button>
                 </td>

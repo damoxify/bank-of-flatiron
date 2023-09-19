@@ -1,5 +1,6 @@
 import React from 'react';
 import Items from './Items';
+import './App.css'
 
 
 
@@ -8,7 +9,6 @@ const App = () => {
 
   return (
     <div>
-      <h1>Bank Transactions</h1>
       <Items/>  
     </div>
   );
