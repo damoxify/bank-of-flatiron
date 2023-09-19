@@ -78,7 +78,7 @@ function Items() {
                 <td>{transaction.category}</td>
                 <td>{transaction.amount}</td>
                 <td>
-                  <button onClick={() => handleDelete(transaction.id)} className="button-18" role="button">
+                  <button onClick={() => handleDelete(transaction.id)} className="button-18">
                     Delete Transaction
                   </button>
                 </td>
