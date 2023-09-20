@@ -10,7 +10,7 @@ function NewItem({ onAddNewTransaction }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const newItem = {
+    const itemData = {
       date: transactionDate,
       category: transactionCategory,
       description: transactionDescription,
@@ -18,7 +18,15 @@ function NewItem({ onAddNewTransaction }) {
     };
 
     // Pass new item to the parent component
-    onAddNewTransaction(newItem);
+    fetch("http://localhost:3000/transactions", {
+      method : "POST",
+      headers : {
+        "Content-Type" : "application/json"
+      },
+      body : JSON.stringify(itemData)
+    })
+    .then((res)=> res.json())
+    .then((newItem)=> onAddNewTransaction(newItem))
 
     // Clear input fields after submission
     setTransactionDate("");
